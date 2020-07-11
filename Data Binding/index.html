@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+</head>
+
+<body>
+    <section id="root">
+
+
+        <section class="product-infor">
+            <section class="infor-left">
+                <section class="img-main">
+                    <img src="https://imgur.com/kynk38D.jpg" id="imgbox">
+
+                </section>
+                <section class="img-left">
+                    <img src="https://imgur.com/Np7Pqgo.jpg" onclick="myFuntion(this)">
+                    <img src="https://imgur.com/7HDQu7G.jpg" onclick="myFuntion(this)">
+                    <img src="https://imgur.com/jKobNHO.jpg" onclick="myFuntion(this)">
+                    <img src="https://imgur.com/stdlL9A.jpg" onclick="myFuntion(this)">
+
+
+                </section>
+
+
+            </section>
+            <section class="infor-right">
+                <h1>
+                    <a v-bind:href="url" v-bind:target="target">
+                        {{title}}
+                        
+                    </a>
+                    <!-- khi đó url được hiểu là 1 biến -->
+
+                </h1>
+                <br>
+                <p class="cost">{{formatPrice()}}</p>
+                <br>
+                <p> Mã sản phẩm: ATS021S8</p>
+                <br>
+                <p>Trạng thái: Còn hàng</p>
+                <br>
+                <p style="font-weight:bold;">Màu sắc</p>
+                <br>
+                <section class="table_color">
+                    <div class="c1"></div>
+                    <div class="c2"></div>
+                    <div class="c3"></div>
+                    <div class="c4"></div>
+                    <div class="c5"></div>
+
+                    <div class="c6"></div>
+                    <div class="c7"></div>
+                    <div class="c8"></div>
+
+
+                </section>
+                <br>
+                <p style="font-weight:bold;">Kích thước</p>
+                <section class="size">
+                    <div>XS</div>
+                    <div>S</div>
+                    <div>M</div>
+                    <div>L</div>
+                    <div>XL</div>
+                    <div>XXL</div>
+
+                </section>
+                <div>
+                    <button type="submit">MUA NGAY</button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </section>
+
+</body>
+<script src="main.js"></script>
+
+</html>
